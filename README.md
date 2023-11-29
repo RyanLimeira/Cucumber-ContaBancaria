@@ -4,7 +4,7 @@
 Desenvolvimento de um projeto Java centrado na implementação do Cucumber e JUnit, modelando uma conta bancária simples.
 
 ## Classes Projeto
-´´´java 
+```java 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -96,7 +96,7 @@ public class Conta {
     }
 }
 
-´´´
+```
 
 ## Professor
 Daniel Domingos Akira de Sa Pimentel Ohata
