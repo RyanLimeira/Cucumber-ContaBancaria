@@ -98,5 +98,43 @@ public class Conta {
 
 ```
 
+## Saída Cucumber
+```
+nov. 28, 2023 11:40:38 PM cucumber.api.cli.Main run
+ADVERTÊNCIA: You are using deprecated Main class. Please use io.cucumber.core.cli.Main
+
+@tag @tag1
+Scenario: Cliente especial com saldo negativo                            # src/test/java/arquivo_teste.feature:25
+  Given Um cliente especial com saldo atual de -200 reais                # Conta.um_cliente_especial_com_saldo_atual_de_reais(int)
+  When for solicitado um saque no valor de 100 reais                     # Conta.for_solicitado_um_saque_no_valor_de_reais(int)
+  Then deve efetuar o saque e atualizar o saldo da conta para -300 reais # Conta.deve_efetuar_o_saque_e_atualizar_o_saldo_da_conta_para_reais(int)
+  And check more outcomes                                                # Conta.check_more_outcomes()
+      io.cucumber.java.PendingException: TODO: implement me
+	at Conta.check_more_outcomes(Conta.java:88)
+	at ✽.check more outcomes(file:///C:/Users/limei/eclipse-workspace/BDD/src/test/java/arquivo_teste.feature:29)
+
+
+@tag @tag2
+Scenario Outline: Cliente comum com saldo negativo                            # src/test/java/arquivo_teste.feature:32
+  Given Um cliente comum com saldo atual de -200 reais                        # Conta.um_cliente_comum_com_saldo_atual_de_reais(int)
+  When solicitar um saque de 200 reais                                        # Conta.solicitar_um_saque_de_reais(int)
+  Then não deve efetuar o saque e deve retornar a mensagem Saldo Insuficiente # Conta.não_deve_efetuar_o_saque_e_deve_retornar_a_mensagem_saldo_insuficiente()
+
+Pending scenarios:
+file:///C:/Users/limei/eclipse-workspace/BDD/src/test/java/arquivo_teste.feature:25 # Cliente especial com saldo negativo
+
+2 Scenarios (1 pending, 1 passed)
+7 Steps (1 pending, 6 passed)
+0m0,519s
+
+
+io.cucumber.java.PendingException: TODO: implement me
+	at Conta.check_more_outcomes(Conta.java:88)
+	at ✽.check more outcomes(file:///C:/Users/limei/eclipse-workspace/BDD/src/test/java/arquivo_teste.feature:29)
+
+
+
+```
+
 ## Professor
 Daniel Domingos Akira de Sa Pimentel Ohata
